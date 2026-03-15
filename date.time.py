@@ -26,6 +26,7 @@ print(now)
 print(now.year)
 print(now.month)
 
+
 #math module
 # Print the lowest value
 print(min(5,10))
