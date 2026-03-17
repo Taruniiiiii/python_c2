@@ -1,9 +1,9 @@
 # Function to find the second largest number in a list
-"""def s_lar_num(nums):
+def s_lar_num(nums):
     nums.sort()
     return nums[-2]
 nums=[1,3,2,4,6,91,8]
-print(s_lar_num(nums))"""
+print(s_lar_num(nums))
 
 #longest word in a sequence
 def longest_word(words):
@@ -16,6 +16,7 @@ words="hello im taruni medishetty".split()
 print(longest_word(words))
 
 #missing number
+
 def find_missing(nums):
     n=len(nums)+1
     s=set(nums)
