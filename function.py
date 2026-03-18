@@ -3,7 +3,7 @@ def s_lar_num(nums):
     nums.sort()
     return nums[-2]
 nums=[1,3,2,4,6,91,8]
-print(s_lar_num(nums))
+print(s_lar_num(nums)"""
 
 #longest word in a sequence
 def longest_word(words):
