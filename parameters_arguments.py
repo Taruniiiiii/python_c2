@@ -67,3 +67,36 @@ def func(a,b,c,**kwargs):
     print(a,b,c)
     print(kwargs)
 func(2,3,4,p=10,q=99)
+
+#1
+def cpn(*args):
+    count=0
+    for num in args:
+        if num>0:
+            count+=1
+    return count
+print(cpn(-10,2,-4,22,-44,23,28,87,43))    
+
+#2 sum integers
+def soi(**kwargs):
+    sum=0
+    for val in kwargs.values():
+        if type(val)==int:
+            sum+=val
+    return sum
+print(soi(a=3,b=2,c="s",d=4,s=3,f=43,h="sd"))
+
+#func with *args and **kwargs
+def b(*args,**kwargs):
+    odd_tot=0
+    eve_tot=0
+
+    for val in args:
+        if val%2==0:
+            odd_tot+=val
+    for val in kwargs.values():
+            if val%2!=0:
+                eve_tot+=val
+    return (odd_tot, eve_tot)
+print(b(1,2,3,5,4,6, a=9,b=8,i=1))
+            
