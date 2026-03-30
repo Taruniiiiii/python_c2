@@ -100,3 +100,10 @@ def b(*args,**kwargs):
     return (odd_tot, eve_tot)
 print(b(1,2,3,5,4,6, a=9,b=8,i=1))
             
+            
+#default and multiple return(combined)
+def stats(a, b=10):
+    return a+b, a*b
+
+print(stats(5))      # uses default
+print(stats(5, 3))   # overrides default
