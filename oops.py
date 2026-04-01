@@ -21,7 +21,7 @@ class C(A,B):
 c=C()
 c.aa()
 c.bb()"""
-#multilevel(1 parent multiple child)hierarchial
+#multilevel(parentA parent b)hierarchial(grand parent parent child)
 class A:
     def aa(self):
         print("class A")
@@ -33,3 +33,32 @@ class C(B):
         print("class C")
 b=B()
 b.bb()
+#hierarchial(parent)
+class A:
+    def aa(self):
+        print("class A")
+    def kk(self):
+        print("class k")
+class B(A):
+    def bb(self):
+        print("class B")
+class C(A):
+    def cc(self):
+        print("class C")
+b=B()
+c=C()
+b.aa()
+c.kk()
+
+#1
+class vehicle:
+    def Start(self):
+        print("vehicle starts")
+class car:
+    def drive(self):
+        print("drive the car")
+v=vehicle()
+c=car()
+v.Start()
+c.drive()
+        
