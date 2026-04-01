@@ -33,7 +33,7 @@ class C(B):
         print("class C")
 b=B()
 b.bb()
-#hierarchial(parent)
+#hierarchial(1 parent, mul child)
 class A:
     def aa(self):
         print("class A")
@@ -61,4 +61,15 @@ v=vehicle()
 c=car()
 v.Start()
 c.drive()
+        
+#super keyword(if child class uses constructor  it cannot access parent class
+# so we use super class to access parent class)
+class Car:
+    def __init__(self,name):
+        self.name=name
+class red_c(Car):
+    def __init__(self, color ,name):
+        super().__init__(name)
+        self.color=color
+
         
