@@ -72,7 +72,7 @@ class red_c(Car):
         super().__init__(name)
         self.color=color
 
-#
+#. Person → Student
 class person:
     def show_name(self,name):
         print("hi my name is ",name)
@@ -83,3 +83,5 @@ p=person()
 s=student()
 p.show_name("tar")
 s.show_marks("10")
+
+#
