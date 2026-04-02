@@ -72,4 +72,14 @@ class red_c(Car):
         super().__init__(name)
         self.color=color
 
-        
+#
+class person:
+    def show_name(self,name):
+        print("hi my name is ",name)
+class student(person):#here inherit
+    def show_marks(self,marks):
+        print("marks of the student is",marks)
+p=person()
+s=student()
+p.show_name("tar")
+s.show_marks("10")
