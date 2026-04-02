@@ -84,4 +84,16 @@ s=student()
 p.show_name("tar")
 s.show_marks("10")
 
-#
+#using super keyword
+class person:
+    def __init__(self,name):
+        self.name=name
+class employee(person):
+    def __init__(self,name,salary):
+        super().__init__(name)
+        self.salary=salary
+    def display(self):
+        print("Name",self.name)
+        print("Salary",self.salary)
+e=employee("taruni",5000)
+e.display()    
