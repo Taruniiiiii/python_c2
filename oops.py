@@ -82,8 +82,7 @@ class student(person):#here inherit
 p=person()
 s=student()
 p.show_name("tar")
-s.show_ma
-rks("10")
+s.show_marks("10")
 
 #using super keyword
 class person:
