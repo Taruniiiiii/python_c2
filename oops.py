@@ -73,6 +73,7 @@ class red_c(Car):
         self.color=color
 
 #. Person → Student
+
 class person:
     def show_name(self,name):
         print("hi my name is ",name)
