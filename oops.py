@@ -20,7 +20,7 @@ class C(A,B):
         print("class C")
 c=C()
 c.aa()
-c.bb()"""
+c.bb()
 #multilevel(parentA parent b)hierarchial(grand parent parent child)
 class A:
     def aa(self):
@@ -110,3 +110,9 @@ class RecentCounter:
         while self.records[self.start] < t - 3000:
             self.start += 1
         return len(self.records) - self.start
+    
+"""
+a = 6
+b = 3
+a /= 2 * b
+print(a)
