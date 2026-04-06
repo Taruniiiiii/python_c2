@@ -116,3 +116,32 @@ a = 6
 b = 3
 a /= 2 * b
 print(a)
+from abc import ABC, abstractmethod
+
+
+class car(ABC):
+    @abstractmethod
+    def stop(self):
+        print("Hi")
+        
+
+class c1():
+    def stop(self):
+        print("car started")
+
+"""        
+class c2():
+    pass
+    
+    def stop(self):
+        print("car stoped")
+    """
+
+
+
+        
+ob1 = c1()
+
+
+ob1.start()
+nbh-shvd-cun
