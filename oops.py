@@ -1,4 +1,4 @@
-"""#inheritance(single)
+#inheritance(single)
 class manager:
     def show(self):
         print("im a manager")
@@ -111,7 +111,7 @@ class RecentCounter:
             self.start += 1
         return len(self.records) - self.start
     
-"""
+
 a = 6
 b = 3
 a /= 2 * b
