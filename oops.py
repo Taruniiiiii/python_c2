@@ -137,11 +137,52 @@ class c2():
         print("car stoped")
     """
 
+from abc import ABC, abstractmethod
+import math
+
+# Abstract class
+class Shape(ABC):
+
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        pass
 
 
-        
-ob1 = c1()
+# Circle class
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
 
 
-ob1.start()
-nbh-shvd-cun
+# Rectangle class
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+
+
+# Usage
+c = Circle(5)
+r = Rectangle(4, 6)
+
+print("Circle Area:", c.area())
+print("Circle Perimeter:", c.perimeter())
+
+print("Rectangle Area:", r.area())
+print("Rectangle Perimeter:", r.perimeter())
