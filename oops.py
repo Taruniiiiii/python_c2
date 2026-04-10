@@ -176,7 +176,6 @@ class Rectangle(Shape):
     def perimeter(self):
         return 2 * (self.length + self.width)
 
-
 # Usage
 c = Circle(5)
 r = Rectangle(4, 6)
