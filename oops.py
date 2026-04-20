@@ -1,4 +1,4 @@
-#inheritance(single)
+"""#inheritance(single)
 class manager:
     def show(self):
         print("im a manager")
@@ -117,6 +117,24 @@ b = 3
 a /= 2 * b
 print(a)
 from abc import ABC, abstractmethod
+##
+class MusicalInstrument:
+    def __init__(self, name, instrument_type):
+        self.name = name
+        self.instrument_type = instrument_type
+
+    def play(self):
+        print(f'The {self.name} is fun to play!')
+
+    def get_fact(self):
+        return f'The {self.name} is part of the {self.instrument_type} family of instruments.'
+
+
+instrument_1 = MusicalInstrument('Oboe', 'woodwind')
+instrument_2 = MusicalInstrument('Trumpet', 'brass')
+
+instrument_1.play()
+print(instrument_1.get_fact())
 
 ##class Dog:
     def __init__(self, name, age):
@@ -199,3 +217,86 @@ print("Circle Perimeter:", c.perimeter())
 
 print("Rectangle Area:", r.area())
 print("Rectangle Perimeter:", r.perimeter())
+
+##"""
+#1
+class Student:
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def display(self):
+        print(self.name,self.marks)
+s=Student("taruni",90)
+s.display()  
+##
+#2
+class Employee:
+    def __init__(self,name,salary):
+        self.name=name
+        self.salary=salary
+    def show_details(self):
+        print(self.name,self.salary)
+e=Employee("sohan",60)
+e.show_details()
+        
+#3
+class Bank:
+    
+    def __init__(self,balance):
+        self.balance=balance
+    def deposit(self,amount):
+        self.balance+=amount
+        
+    def withdrawal(self,amount):
+        if amount<=self.balance:
+            self.balance-=amount
+        else:
+            print("insufficient balance")
+    def show_balance(self):
+        print(self.balance,"is your balance amt")
+b=Bank(3000)
+b.deposit(1000)
+b.withdrawal(500)
+b.show_balance()
+
+
+#3
+class Vehicle:
+    def start(self):
+        print("Vehicle starts")
+
+class Car(Vehicle):
+    def drive(self):
+        print("Car is driving")
+
+
+# Usage
+c = Car()
+c.start()
+c.drive()   
+
+#
+"""class Animal:
+    
+    def sound(self):
+        print("Animal sound")
+
+class Dog(Animal):
+    
+    def sound(self):
+        print("Dog bark")
+
+d = Dog()
+d.sound()"""
+
+        
+        
+"""class Student:
+    
+    def _init_(self, name):
+        self.name = name
+
+s = Student("Ravi")
+print(s.name)
+"""
+ 
