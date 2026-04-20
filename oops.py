@@ -276,7 +276,7 @@ c.start()
 c.drive()   
 
 #
-"""class Animal:
+class Animal:
     
     def sound(self):
         print("Animal sound")
@@ -287,16 +287,16 @@ class Dog(Animal):
         print("Dog bark")
 
 d = Dog()
-d.sound()"""
+d.sound()
 
         
         
-"""class Student:
+class Student:
     
     def _init_(self, name):
         self.name = name
 
 s = Student("Ravi")
 print(s.name)
-"""
+
  
