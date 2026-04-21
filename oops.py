@@ -358,4 +358,18 @@ m=Manager()
 e.work()
 d.work()
 m.work()
-    
+
+#shape ex
+class Shape:
+    def area(self):
+        print("areaaaa")
+class Circle(Shape):
+    def area(self):
+        print("Area of circle")
+class Rectangle(Shape):
+    def area(self):
+        print("area of rectangle")
+s=Shape()
+c=Circle()
+r=Rectangle()
+c.area()
