@@ -218,7 +218,7 @@ print("Circle Perimeter:", c.perimeter())
 print("Rectangle Area:", r.area())
 print("Rectangle Perimeter:", r.perimeter())
 
-##"""
+##
 #1
 class Student:
     def __init__(self,name,marks):
@@ -297,6 +297,46 @@ class Student:
         self.name = name
 
 s = Student("Ravi")
-print(s.name)
+print(s.name)"""
 
+ #inheritance
  
+class Vehicle:
+    def start(self):
+        print("vehicle started")
+class car(Vehicle):
+    def drive(self):
+        print("vehicle deives")
+v=Vehicle()
+c=car()
+c.start()
+c.drive()
+
+#poly
+class Animal():
+    def sound(self):
+        print("any sound")
+class dog(Animal):
+    def sound(self):
+        print("bow")
+class cat(Animal):
+    def sound(self):
+        print("meow")
+a=Animal()
+d=dog()
+c=cat()
+a.sound()
+d.sound()
+c.sound()
+#student management
+class Student:
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def grade(self):
+        if self.marks>50:
+            print("pass")
+        else:
+            print("fail")
+s=Student("tar",90)
+s.grade()
