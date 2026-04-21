@@ -340,3 +340,22 @@ class Student:
             print("fail")
 s=Student("tar",90)
 s.grade()
+
+
+#employee ecosystem
+class Employee:
+    def work(self):
+        print("working rn")
+class Developer(Employee):
+    def work(self):
+        print("developer working")
+class Manager(Employee):
+    def work(self):
+        print("Manager working")
+e=Employee()
+d=Developer()
+m=Manager()
+e.work()
+d.work()
+m.work()
+    
