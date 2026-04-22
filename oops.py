@@ -340,7 +340,7 @@ class Student:
             print("fail")
 s=Student("tar",90)
 s.grade()
-
+"""
 
 #employee ecosystem
 class Employee:
@@ -432,7 +432,7 @@ print(s.get_marks())
 s.set_marks(-10)       
 print(s.get_marks())  
 
-"""
+
 
 #employee ecosystem
 class Employee:
