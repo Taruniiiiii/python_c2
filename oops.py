@@ -360,16 +360,18 @@ d.work()
 m.work()
 
 #shape ex
-class Shape:
+from abc import ABC, abstractmethod
+class Shape(ABC):
+    @abstractmethod
     def area(self):
-        print("areaaaa")
+        pass
 class Circle(Shape):
     def area(self):
         print("Area of circle")
 class Rectangle(Shape):
     def area(self):
         print("area of rectangle")
-s=Shape()
 c=Circle()
 r=Rectangle()
 c.area()
+r.area()
