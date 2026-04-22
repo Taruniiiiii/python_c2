@@ -297,7 +297,7 @@ class Student:
         self.name = name
 
 s = Student("Ravi")
-print(s.name)"""
+print(s.name)
 
  #inheritance
  
@@ -375,3 +375,78 @@ c=Circle()
 r=Rectangle()
 c.area()
 r.area()
+
+#constructor
+class Employee:
+    def __init__(self,name,department,salary):
+        self.name=name
+        self.department=department
+        self.salary=salary
+    def Show_details(self):
+        print("name:",self.name)
+        print("dept:",self.department)
+        print("salary:",self.salary)
+e=Employee("Tar","PR",5000)
+e.Show_details()
+
+#Encapsulation
+class BankAccount():
+    def __init__(self,balance):
+        self.balance=balance
+    def deposit(self,amount):
+        self.balance+=amount
+    def withdraw(self,amount):
+        if amount<self.balance:
+            self.balance-=amount
+        else:
+            print("insufficient balance")
+    def check_balance(self):
+        print(self.balance,"is your remaining bal")
+        
+b=BankAccount(5000)
+b.deposit(50)
+b.withdraw(100)
+b.check_balance()
+
+#encapsulation
+class Student:
+    def __init__(self, marks):
+        self.__marks = marks   # private variable
+
+    def set_marks(self, marks):
+        if marks < 0:
+            print("negative marks")
+        else:
+            print("pos marks")
+
+    def get_marks(self):
+        return self.__marks
+
+
+# Usage
+s = Student()
+
+s.set_marks(50)
+print(s.get_marks())   
+
+s.set_marks(-10)       
+print(s.get_marks())  
+
+"""
+
+#employee ecosystem
+class Employee:
+    def work(self):
+        print("working rn")
+class Developer(Employee):
+    def work(self):
+        print("developer working")
+class Manager(Employee):
+    def work(self):
+        print("Manager working")
+e=Employee()
+d=Developer()
+m=Manager()
+e.work()
+d.work()
+m.work()
