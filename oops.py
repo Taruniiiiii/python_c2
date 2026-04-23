@@ -445,7 +445,7 @@ class Student:
 s = Student(0)
 
 s.set_marks(50)
-print(s.get_marks())   # 50
+print(s.get_marks())   
 
 s.set_marks(100)
-print(s.get_marks())   # still 50
+print(s.get_marks()) 
