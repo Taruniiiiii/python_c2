@@ -408,30 +408,6 @@ b.deposit(50)
 b.withdraw(100)
 b.check_balance()
 
-#encapsulation
-class Student:
-    def __init__(self, marks):
-        self.__marks = marks   # private variable
-
-    def set_marks(self, marks):
-        if marks < 0:
-            print("negative marks")
-        else:
-            print("pos marks")
-
-    def get_marks(self):
-        return self.__marks
-
-
-# Usage
-s = Student()
-
-s.set_marks(50)
-print(s.get_marks())   
-
-s.set_marks(-10)       
-print(s.get_marks())  
-
 
 
 #employee ecosystem
@@ -450,3 +426,26 @@ m=Manager()
 e.work()
 d.work()
 m.work()
+#encapsulation
+
+class Student:
+    def __init__(self, marks):
+        self.__marks = marks   # private
+
+    def set_marks(self, marks):
+        if marks < 0:
+            print("negative marks")
+        else:
+            self.__marks = marks   # update value
+
+    def get_marks(self):
+        return self.__marks
+
+
+s = Student(0)
+
+s.set_marks(50)
+print(s.get_marks())   # 50
+
+s.set_marks(100)
+print(s.get_marks())   # still 50
