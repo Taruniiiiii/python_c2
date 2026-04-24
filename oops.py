@@ -457,5 +457,32 @@ class calculator:
 s=calculator()
 s.add(3,4)
 
-        
-        
+##abstraction
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start(self):
+        pass
+
+
+# Child class
+class Car(Vehicle):
+    def start(self):
+        print("Car starts")
+
+
+# Child class
+class Bike(Vehicle):
+    def start(self):
+        print("Bike starts")
+
+
+# Objects
+c = Car()
+b = Bike()
+
+c.start()
+b.start()
