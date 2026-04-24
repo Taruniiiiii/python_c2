@@ -450,7 +450,7 @@ print(s.get_marks())
 s.set_marks(100)
 print(s.get_marks()) 
 
-##
+##polymorphism
 class calculator:
     def add(self,a,b):
         print(a+b)
