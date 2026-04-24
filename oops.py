@@ -449,3 +449,13 @@ print(s.get_marks())
 
 s.set_marks(100)
 print(s.get_marks()) 
+
+##
+class calculator:
+    def add(self,a,b):
+        print(a+b)
+s=calculator()
+s.add(3,4)
+
+        
+        
