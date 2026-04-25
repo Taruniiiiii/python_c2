@@ -472,9 +472,6 @@ class Vehicle(ABC):
 class Car(Vehicle):
     def start(self):
         print("Car starts")
-
-
-# Child class
 class Bike(Vehicle):
     def start(self):
         print("Bike starts")
