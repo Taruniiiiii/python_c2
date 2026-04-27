@@ -311,8 +311,8 @@ v=Vehicle()
 c=car()
 c.start()
 c.drive()
-
-#poly
+"""
+#polymorphism
 class Animal():
     def sound(self):
         print("any sound")
@@ -340,7 +340,7 @@ class Student:
             print("fail")
 s=Student("tar",90)
 s.grade()
-"""
+
 
 #employee ecosystem
 class Employee:
