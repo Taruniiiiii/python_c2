@@ -481,6 +481,5 @@ class Bike(Vehicle):
 # Objects
 c = Car()
 b = Bike()
-
 c.start()
 b.start()
