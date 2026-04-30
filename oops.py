@@ -467,8 +467,6 @@ class Vehicle(ABC):
     @abstractmethod
     def start(self):
         pass
-
-
 # Child class
 class Car(Vehicle):
     def start(self):
@@ -476,7 +474,6 @@ class Car(Vehicle):
 class Bike(Vehicle):
     def start(self):
         print("Bike starts")
-
 
 # Objects
 c = Car()
