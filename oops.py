@@ -458,7 +458,7 @@ class calculator:
 s=calculator()
 s.add(3,4)
 
-##abstraction
+##abstrac
 from abc import ABC, abstractmethod
 
 # Abstract class
