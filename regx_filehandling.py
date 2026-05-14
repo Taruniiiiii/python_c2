@@ -87,3 +87,7 @@ with open("hi.txt","a")as t:
 file=open("tar.txt","x")
 file.write("new file created using x")
 file.close()
+
+# w: creating a file if there no named file otherwise it will overwrites
+# a: creating a file if not exists otherwise it will add the new text
+# x: creaing a file and if the file exists returns an error
