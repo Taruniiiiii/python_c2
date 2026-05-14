@@ -62,3 +62,28 @@ if x:
   print("Yes, there is at least one match!")
 else:
   print("No match")
+#####file handling###
+#syntax=> file=open(filename,mode)
+#ex=open(ex.txt,r)(read)
+
+## if file exists file overwrites 
+file=open("m1.txt","w")
+file.write("hi im t")
+file.close
+
+##with
+with open("hi.txt","w") as t:
+    t.write("this has varibale name ")
+#read
+file=open("hi.txt","r")
+print(file.read())
+file.close()
+
+#adding text or updating text
+with open("hi.txt","a")as t:
+    t.write("hi yall")
+    
+##creating a file with x
+file=open("tar.txt","x")
+file.write("new file created using x")
+file.close()
