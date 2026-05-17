@@ -106,4 +106,4 @@ def stats(a, b=10):
     return a+b, a*b
 
 print(stats(5))      # uses default
-print(stats(5, 3))   # overrides default
+print(stats(5,3))   # overrides default
