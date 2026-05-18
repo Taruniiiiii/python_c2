@@ -1,4 +1,4 @@
-#two sum
+"""#two sum
 def two_sum(num,target):
     di={}
     for i in range(len(num)):
@@ -66,7 +66,6 @@ for row in board:
             break
         else:
             new.append(num)
-            break
     
 #parking
 class parkingSystem:
@@ -93,7 +92,7 @@ carType=int(input("enter car type:"))
 print(p.addCar(carType))
 
 
-"""#design browsw hist
+#design browsw hist
 class BrowserHistory:
     def __init__(self,homepage):
     def visit(self,url):
@@ -101,3 +100,35 @@ class BrowserHistory:
     def forward(self,steps):
         
 """
+#pract
+#palindrome
+x=input("ENter a word: ")
+for i in x:
+    if x==x[::-1]:
+        print("palinfrome")
+        break
+    else:
+        print("not palindrome")
+        break
+#anagram
+a=input("enter a word:")
+b=input("enter another word:")
+if sorted(a)==sorted(b):
+    print("anagram")
+else:
+    print("not anagram")
+#duplicate
+num=[1,2,3]
+for i in num:
+    if num.count(i)>1:
+        print("duplictes found")
+        break
+    else:
+        print("duplicates not found")
+        break
+#rev string
+i="hello"
+for letter in i:
+   print(i[::-1])
+   break
+
