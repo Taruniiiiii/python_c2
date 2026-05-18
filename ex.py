@@ -131,4 +131,15 @@ i="hello"
 for letter in i:
    print(i[::-1])
    break
+#freq  count
+w="apple"
+for letter in w:
+    print(letter,w.count(letter))
 
+#max num
+ex=[11,2,5,3,9,5,1]
+print(max(ex),"is max",min(ex),"is min")
+
+#sorting
+s=[22,19,34,39,10,32]
+print(sorted(s))
