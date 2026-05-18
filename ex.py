@@ -99,7 +99,6 @@ class BrowserHistory:
     def back(self,steps):
     def forward(self,steps):
         
-"""
 #pract
 #palindrome
 x=input("ENter a word: ")
@@ -142,4 +141,22 @@ print(max(ex),"is max",min(ex),"is min")
 
 #sorting
 s=[22,19,34,39,10,32]
-print(sorted(s))
+print(sorted(s))"""
+#lar num
+
+x=[22,19,34,39,10,32]
+x.sort()
+print(x[-2])
+
+#linear search
+l=[22,19,34,39,10,32]
+target=10
+found=False
+for i in l:
+    if i==target:
+        found=True
+if found:
+    print("ele found")
+else:
+    print("ele not found")
+    
