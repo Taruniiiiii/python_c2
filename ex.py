@@ -141,7 +141,7 @@ print(max(ex),"is max",min(ex),"is min")
 
 #sorting
 s=[22,19,34,39,10,32]
-print(sorted(s))"""
+print(sorted(s))
 #lar num
 
 x=[22,19,34,39,10,32]
@@ -160,3 +160,23 @@ if found:
 else:
     print("ele not found")
     
+#find index
+i=[5,8,2,9]
+target=8
+for x in i:
+    if x==target:
+        print(i.index(target))
+        
+t=[2,1,2,3,2,1,1]
+count=0
+for i in t:
+    if t.count(i)>1:
+        count+=1
+print(count)
+    """
+#search w in li
+ex=["apple","banana","grape"]
+class Solution:
+	def removeDuplicates(self, nums: List[int]) -> int:
+		nums[:] = sorted(set(nums))
+		return len(nums)        
