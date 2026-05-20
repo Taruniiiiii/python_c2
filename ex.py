@@ -173,9 +173,9 @@ for i in t:
     if t.count(i)>1:
         count+=1
 print(count)
-    """
+    
 #search w in li
-ex=["apple","banana","grape"]
+ex=["apple","banana","grape"]"""
 class Solution:
 	def removeDuplicates(self, nums: List[int]) -> int:
 		nums[:] = sorted(set(nums))
