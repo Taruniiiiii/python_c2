@@ -180,3 +180,14 @@ class Solution:
 	def removeDuplicates(self, nums: List[int]) -> int:
 		nums[:] = sorted(set(nums))
 		return len(nums)        
+class Solution:
+    def numberOfSteps(self, num: int) -> int:
+        step_count=0
+        while num!=0:
+            if num%2==0:
+                num=num//2
+                res=num
+            else:
+                num=num-1
+            step_count+=1
+        return step_count
