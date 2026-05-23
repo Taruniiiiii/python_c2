@@ -199,3 +199,17 @@ class Solution:
             current_sum=max(num,current_sum+num)
             max_sum=max(max_sum,current_sum)
         return max_sum
+class Solution:
+    def selfDividingNumbers(self, left: int, right: int) -> List[int]:
+        lis=[]
+        for num in range(left,right+1):
+            temp=num
+            valid=True
+            while temp>0:
+                digit=temp%10
+                if digit==0 or num%digit!=0:
+                    valid=False
+                temp=temp//10
+            if valid:
+                lis.append(num)
+        return lis
