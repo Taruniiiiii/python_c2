@@ -213,6 +213,8 @@ class Solution:
             if valid:
                 lis.append(num)
         return lis
+#leet
+    
 class Solution:
 
     def wordPattern(self, pattern: str, s: str) -> bool:
