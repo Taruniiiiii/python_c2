@@ -261,3 +261,43 @@ def compareTriplets(a, b):
         elif a[i]<b[i]:
             bob+=1
     return [alice,bob]
+def quickSort(arr):
+    left = []
+    equal = []
+    right = []
+    p=arr[0]
+
+    for ele in arr:
+        if ele<p:
+            left.append(ele)
+        elif ele>p:
+            right.append(ele)
+        else:
+            equal.append(ele)
+    return left+equal+right
+
+def getTotalX(a, b):
+
+    count = 0
+
+    for num in range(max(a), min(b) + 1):
+
+        valid = True
+
+        for x in a:
+
+            if num % x != 0:
+
+                valid = False
+
+        for y in b:
+
+            if y % num != 0:
+
+                valid = False
+
+        if valid:
+
+            count += 1
+
+    return count
