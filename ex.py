@@ -301,3 +301,18 @@ def getTotalX(a, b):
             count += 1
 
     return count
+class Solution:
+    def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:
+        m=len(mat)
+        n=len(mat[0])
+        if m*n!=r*c:
+            return mat
+        flat=[]
+        for row in mat:
+            for ele in row:
+                flat.append(ele)
+        res=[]
+        for i in range(0,len(flat),c):
+            res.append(flat[i:i+c])
+        return res
+
