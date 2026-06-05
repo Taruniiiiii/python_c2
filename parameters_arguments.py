@@ -149,3 +149,9 @@ class Solution:
                 right = mid - 1
 
         return False
+def bonAppetit(bill, k, b):
+    actual_bill=(sum(bill)-bill[k])//2
+    if actual_bill==b:
+        print("Bon Appetit")
+    else:
+        print(b-actual_bill)
