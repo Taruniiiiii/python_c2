@@ -163,4 +163,19 @@ class Solution:
                     heights[j],heights[j+1]=heights[j+1],heights[j]
                     names[j],names[j+1]=names[j+1],names[j]
         return names
+
+class Solution:
+    def heightChecker(self, heights: List[int]) -> int:
+        n=len(heights)
+        original=heights[:]
+        
+        for i in range(n):
+            for j in range(0,n-i-1):
+                if heights[j]>heights[j+1]:
+                    heights[j],heights[j+1]=heights[j+1],heights[j]
+        count=0
+        for i in range(n):
+            if original[i]!=heights[i]:
+                count+=1
+        return count
         
