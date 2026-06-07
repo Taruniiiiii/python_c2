@@ -149,6 +149,7 @@ class Solution:
                 right = mid - 1
 
         return False
+    #leet
 def bonAppetit(bill, k, b):
     actual_bill=(sum(bill)-bill[k])//2
     if actual_bill==b:
@@ -163,7 +164,6 @@ class Solution:
                     heights[j],heights[j+1]=heights[j+1],heights[j]
                     names[j],names[j+1]=names[j+1],names[j]
         return names
-
 class Solution:
     def heightChecker(self, heights: List[int]) -> int:
         n=len(heights)
