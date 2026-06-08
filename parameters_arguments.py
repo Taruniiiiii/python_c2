@@ -1,8 +1,8 @@
-#1 print name
+"""#1 print name
 def namee(name="taruni"):
     print(name)
 namee()
-
+"""
 #2 add 2 nums
 def add_nums(a,b):
     sum=a+b
