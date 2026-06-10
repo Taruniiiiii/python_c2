@@ -7,7 +7,7 @@ namee()
 def add_nums(a,b):
     sum=a+b
     return sum
-print(add_nums(3,4))"""
+print(add_nums(3,4))
 
 #3If no name is given, print "Guest
 def ex(name="guest"):
@@ -21,7 +21,7 @@ def eveodd(n):
     else:
         print("odd")
 eveodd(7)
-
+"""
 #5largest num
 a,b,c=map(int,input().split())
 if a>b and a>c:
