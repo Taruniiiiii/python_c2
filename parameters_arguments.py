@@ -21,13 +21,13 @@ def eveodd(n):
     else:
         print("odd")
 eveodd(7)
-"""
+
 #5largest num
 a,b,c=map(int,input().split())
 if a>b and a>c:
     print(a)
 elif b>c:
-    print(b)      
+    print(b)      """
 else:
     print(c)
     
