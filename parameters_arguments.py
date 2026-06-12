@@ -27,7 +27,7 @@ a,b,c=map(int,input().split())
 if a>b and a>c:
     print(a)
 elif b>c:
-    print(b)      """
+    print(b)      
 else:
     print(c)
     
@@ -39,7 +39,7 @@ def summ(*numbers):
     return total
 
 print(summ(1,2,5,44,32))
-    
+    """
         
 #7Count how many even numbers are passed
 def ex2(*numbers):
