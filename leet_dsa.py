@@ -372,3 +372,137 @@ for _ in range(t):
         else:
             low=mid+1
     print(n-ans)
+##DSA####
+
+
+#Searching algorithms
+
+
+#1. Linear seaarch
+"""
+
+arr = list(map(int,input().split()))
+
+t = int(input())
+
+for i in range(len(arr)):
+    if arr[i]==t:
+        print(i)
+
+"""
+
+#2 Binary Search
+"""
+arr = list(map(int,input().split()))
+
+t = int(input())
+
+
+l = 0
+r = len(arr)-1
+
+while l<=r:
+    m = (l+r)//2
+
+    if arr[m]==t:
+        print(m)
+        break
+    elif arr[m]<t:
+        l = m+1
+    else:
+        r = m-1
+"""
+
+#Sorting----Techiques
+
+
+#arr = [1,5,6,7,3,2] ------------------------------main
+#      [1,5,6,3,7,2]
+#      [1,5,6,3,2,7]---jth => i=0 --> 6-(i+1) = n-i-1
+
+#      [1,5,3,6,2,7]
+#      [1,5,3,2,6,7] => i=1
+
+#      [1,3,5,2,6,7]
+#      [1,3,2,5,6,7] => i=2
+
+#      [1,2,3,5,6,7] => i=3
+
+#      [1,2,3,5,6,7] => i=4
+
+#      [1,2,3,5,6,7] => i=5
+
+"""
+i=0
+last 1
+i=1
+last 2
+"""
+
+def bubblesort(arr): 
+    n = len(arr)#6
+    for i in range(n): #6 #0-5---0,1,2,3,4,5 ====> n 
+        for j in range(0, n-i-1): #I=0,1 ---> 1====0 ===> (n-i-1)
+            if arr[j]>arr[j+1]: #
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+    return arr
+        
+arr = list(map(int,input().split()))
+print(bubblesort(arr))
+
+# time complexity = o(n)*o(n-i-1) = O(n2)
+
+"""
+    
+n = 5
+
+lst = [1,2,3,4,5]
+
+       0 1 2 3 4
+
+       l   m   r
+
+       
+
+       
+
+isbadversion(m)== true or false
+---> true = right = mid-1
+---> false = left = mid+1
+
+"""
+
+#Selection sort------
+
+#arr = [20,12,10,15,2] --len=5
+
+#arr = [2,12,10,15,20] --i=0 ===5-2== n-i-1=3
+
+#arr = [2,10,12,15,20] --i=1
+
+#arr = [2,10,12,15,20] --i=2
+
+#arr = [2,10,12,15,20] --i=3
+
+#arr = [2,10,12,15,20] --i=4
+
+#time complexity: --- o(n)*o(n-i-1)= O(n*(n-i-1))= O(n2)
+
+"""
+
+def selection_sort(arr):
+    n = len(arr) #5
+    for i in range(n): #0-5 ====> i=0,1,2,3 ---n
+       min_idx = i #2
+       for j in range(i+1,n): #3-5 ====>j=3,4 ---n-i-1
+           if arr[j] < arr[min_idx]: #arr[4]<arr[2] ==> 20<12
+               min_idx = j #
+       arr[i],arr[min_idx] = arr[min_idx], arr[i]# arr[2],arr[2]= arr[2],arr[2] ==>
+    return arr
+       
+    
+
+ls = list(map(int,input().split()))
+print(selection_sort(ls))
+"""
