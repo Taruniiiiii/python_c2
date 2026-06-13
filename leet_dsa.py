@@ -357,3 +357,18 @@ class Solution:
                 if nums[j]>nums[j+1]:
                     nums[j],nums[j+1]=nums[j+1],nums[j]
         return nums        
+t=int(input())
+for _ in range(t):
+    n,x=map(int,input().split())
+    arr=list(map(int,input().split()))
+    low=0
+    high=n-1
+    ans=n
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]>=x:
+            ans=mid
+            high=mid-1
+        else:
+            low=mid+1
+    print(n-ans)
