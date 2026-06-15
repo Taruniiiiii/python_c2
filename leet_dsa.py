@@ -453,7 +453,7 @@ print(bubblesort(arr))
 
 # time complexity = o(n)*o(n-i-1) = O(n2)
 
-"""
+
     
 n = 5
 
@@ -471,7 +471,6 @@ isbadversion(m)== true or false
 ---> true = right = mid-1
 ---> false = left = mid+1
 
-"""
 
 #Selection sort------
 
@@ -489,7 +488,7 @@ isbadversion(m)== true or false
 
 #time complexity: --- o(n)*o(n-i-1)= O(n*(n-i-1))= O(n2)
 
-"""
+
 
 def selection_sort(arr):
     n = len(arr) #5
@@ -505,4 +504,19 @@ def selection_sort(arr):
 
 ls = list(map(int,input().split()))
 print(selection_sort(ls))
-"""
+
+arr = [5, 3, 4, 1, 2]
+
+for i in range(1, len(arr)):
+
+    key = arr[i]
+    j = i - 1
+
+    while j >= 0 and arr[j] > key:
+
+        arr[j + 1] = arr[j]
+        j -= 1
+
+    arr[j + 1] = key
+
+print(arr)
