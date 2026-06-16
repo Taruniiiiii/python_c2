@@ -520,3 +520,11 @@ for i in range(1, len(arr)):
     arr[j + 1] = key
 
 print(arr)
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        new=[]
+        for i in nums:
+            new.append(i*i)
+        new.sort()
+        return new
+        
