@@ -139,3 +139,95 @@ class conditionals{
 }
 
 
+class vote{
+    public static void main(String[] args) {
+        boolean courage=true;
+        boolean single=true;
+        
+        if(courage==true)
+        {
+            System.out.println("first condition satisfies");
+            if(single==true)
+            {
+                System.out.println("con 2 sat");
+            }
+        }
+        else{
+            System.out.println("both con are not satisfied");
+        }
+    }
+}
+
+
+
+import java.util.Scanner;
+
+class SwitchExample {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);//obj
+
+        System.out.print("Enter a num: ");
+        int choice=sc.nextInt();//method
+
+        switch(choice) {
+            case 1:
+                System.out.println("money is deposited");
+                break;//pause the execution if condiotion is true
+            case 2:
+                System.out.println("withdraw the money");
+                break;
+            case 3:
+                System.out.println("check balance");
+                break;
+            case 4:
+                System.out.println("exit");
+                break;
+
+            default:
+                System.out.println("Invalid Choice");
+        }
+
+    }
+}
+//loops
+public class stars
+{
+    public static void main(String[] args)
+    {
+        for(int i=1;i<=5;i++)
+        {
+            System.out.println("*");
+        }
+    }
+}
+
+//table
+public class table
+{
+    public static void main(String[] args){
+    int i=1;
+    while(i<=10){
+        System.out.println("5"+"*"+i+"="+ 5*i);
+        i++;
+    }
+}
+}
+public class Arr1
+{
+    public static void main(String[] args){
+    int [] arr1=new int[5];
+    arr1[0]=10;
+    arr1[1]=20;
+    arr1[2]=30;
+    arr1[3]=40;
+    arr1[4]=50;
+    //arr[5]=60;
+    for(int i=0;i< arr1.length;i++){
+        System.out.println(arr1[i]);
+    }
+    
+    
+    
+    
+    }
+}
