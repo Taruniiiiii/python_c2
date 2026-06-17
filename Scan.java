@@ -16,7 +16,7 @@ public static void main(String[] args){
     System.out.println(i);
     System.out.println(f);
 
-}"""
+}
 class Arithmetic {
     public static void main(String[] args) {
         int a = 12;
@@ -68,7 +68,7 @@ class Bitwise {
     }
 }
 
-"""package Pack1;
+package Pack1;
 import java.util.Scanner;
 public class Scan
 {
@@ -95,7 +95,7 @@ public class Scan
         
     }
 }
-"""
+
 
 class inbuilt{
     public static void main(String[] args){
@@ -106,4 +106,36 @@ class inbuilt{
         System.out.println(a.toLowerCase());
         System.out.println(a.trim());
     }
+}"""
+
+
+class conditionals{
+    public static void main(String[] args) {
+        int a=21;
+        int b=12;
+        if(a>b){
+            System.out.println("a is greater");
+        }
+    }
 }
+
+
+import java.util.Scanner;
+
+class conditionals{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);//object
+        System.out.println("enter your age");
+        int age=sc.nextInt();//method
+        if(age>=18){
+            System.out.println("You are eligible to vote");
+        }
+        else{
+            System.out.println("You are NOT eligible to vote");
+        }
+            
+    }
+    
+}
+
+
