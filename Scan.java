@@ -231,3 +231,37 @@ public class Arr1
     
     }
 }
+
+//assignment q1
+public class Count{
+    public static void main(String[] args) {
+       int[] arr2={10,20,30,40,50,60};
+       System.out.println(arr2.length);
+    }
+}
+
+//q2 sum
+public class Addition{
+    public static void main(String[] args) {
+       int[] arr2={10,20,30,40,50,60};
+       int sum=0;
+       for(int i=0;i<arr2.length;i++){
+        sum+=arr2[i];
+       }
+        System.out.println(sum);
+       }
+    }
+
+//q3 product
+
+public class Multiplication{
+    public static void main(String[] args) {
+       int[] arr2={10,20,30,40,50,60};
+       int product=1;
+       for(int i=0;i<arr2.length;i++){
+        product*=arr2[i];
+       }
+        System.out.println(product);
+       }
+    }
+
