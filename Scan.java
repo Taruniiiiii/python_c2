@@ -265,3 +265,23 @@ public class Multiplication{
        }
     }
 
+//18th
+public class Met1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("start");
+        m1();
+        m1();
+        m2(10,20);//METHOD CALL M1
+        System.out.println("end");
+    }
+    public static void m1()
+    {
+        System.out.println("this is m1 method");
+    }
+    public static void m2(int a,int b)
+    {
+        System.out.println(a+b);
+    }
+}
