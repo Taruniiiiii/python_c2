@@ -271,15 +271,19 @@ public class Met1
     public static void main(String[] args)
     {
         System.out.println("start");
+        //method call sattement
         m1();
         m1();
         m2(10,20);//METHOD CALL M1
+        //actual argument is the data or value that is stored informL Argument i.e variable
         System.out.println("end");
     }
     public static void m1()
     {
         System.out.println("this is m1 method");
     }
+    //formal argument is the variable declaration
+    //we can have n no.of formal arguments
     public static void m2(int a,int b)
     {
         System.out.println(a+b);
