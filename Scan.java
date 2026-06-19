@@ -289,3 +289,45 @@ public class Met1
         System.out.println(a+b);
     }
 }
+
+public class Met1
+{
+    public static void main(String[] args)
+    {
+        System.out.println("start");
+        //method call sattement
+        m1();
+        m1();
+         //actual argument is the data or value that is stored informL Argument i.e variable
+        m2(10,20);
+        System.out.println(m4(70,22));
+        System.out.println(m3("taruni"));
+        String result=m3("java");
+        System.out.println(result);
+        
+        //METHOD CALL M1
+       
+        System.out.println("end");
+    }
+    public static void m1()
+    {
+        System.out.println("this is m1 method");
+    }
+    //formal argument is the variable declaration
+    //we can have n no.of formal arguments
+    public static void m2(int a,int b)
+    {
+        System.out.println(a+b);
+    }
+    public static String m3(String name1)
+    {
+        return name;
+        //return name2;
+        
+    }
+    public static int m4(int x,int y)
+    {
+        return x+y;
+        System.out.println("hello");
+    }
+}
