@@ -331,3 +331,29 @@ public class Met1
         System.out.println("hello");
     }
 }
+
+//19
+class Stat
+{
+    //static variables
+    static int age;
+    static String name;
+    static double price;
+    //single line static initializer
+    
+    static String name1="java";
+    //static method
+    public static void main(String[] args)
+    {
+        System.out.println("this is a static method");
+    }
+    //multiline static initializer
+    static
+    {
+        System.out.println("this is amultiline static intializer");
+        System.out.println("age");
+        System.out.println("price");
+        System.out.println("name");
+        System.out.println("name1");
+    }
+}
