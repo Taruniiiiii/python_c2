@@ -357,3 +357,12 @@ class Stat
         System.out.println("name1");
     }
 }
+
+
+public class Phone
+{
+    String brand;
+    double price;
+    String color;
+    
+}
