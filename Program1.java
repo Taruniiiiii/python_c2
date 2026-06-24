@@ -194,3 +194,59 @@ class ChildDriver
 		c1.m1();
 	}
 }
+
+//training
+
+package src;
+
+public class int1 
+{
+	//before java version 8
+	//final Variable
+	//by default all the variable are public static final
+	public static final double pi=3.14;
+	int age=22;
+	
+	//abstract method
+	
+	public void m1()
+	
+	//by default the method is abstract
+	abstract void m2()
+	
+	//after java version 8
+	
+	public static void m3()
+	{
+		System.out.println("this is a default method");
+	}
+	//default method (non-static methods prefixed with default kwyword
+	
+	default void m4()
+	{
+		System.out.println("thi is a default method");
+	}
+	
+
+}
+class Ch1 implements Int1
+{
+	public void m1()
+	{
+		System.out.println("m1() implemented");
+	}
+	public void m2()
+	{
+		System.out.println("m2() implemented");
+	}
+}
+class Int1Driver
+{
+	public static void main(String[] args)
+	{
+		 //===>> WE CANNOT CREATE CLASS AN OBJECT FOR AN INTERFACE
+		 //====>>  WE CANNOT CREATE AN OBJECT FOR AN ABSTRACT CLASS
+		//Int1 obj1 = new Int1();
+
+	}
+}
