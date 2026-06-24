@@ -197,7 +197,6 @@ class ChildDriver
 
 //training
 
-package src;
 
 public class int1 
 {
