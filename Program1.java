@@ -167,3 +167,30 @@ class Drive
 	}
 	
 }
+
+//how to acurie abstact class
+package src;
+
+abstract class Demo1 
+{
+	//a method without the  method body
+	abstract public void m1();
+
+}
+class Childs extends Demo1
+{
+	//by overriding we will be providing the implementation in the child class
+	@Override
+	public void m1()
+	{
+		System.out.println("here we are giving the implementation");
+	}
+}
+class ChildDriver
+{
+	public static void main(String[] args)
+	{
+		Childs c1=new Childs();
+		c1.m1();
+	}
+}
