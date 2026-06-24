@@ -88,3 +88,82 @@ class Mains
 
 
 
+class Vehicle
+{
+    String brand;
+
+    public void start()
+    {
+        System.out.println("Vehicle starts");
+    }
+}
+
+// Specialized Class
+class Car extends Vehicle
+{
+    int doors;
+
+    public void drive()
+    {
+        System.out.println("Car is driving");
+    }
+}
+
+// Specialized Class
+class Bike extends Vehicle
+{
+    public void ride()
+    {
+        System.out.println("Bike is riding");
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Car c = new Car();
+        c.brand = "BMW";
+
+        c.start();
+        c.drive();
+
+        Bike b = new Bike();
+        b.brand = "Honda";
+
+        b.start();
+        b.ride();
+    }
+}
+
+package src;
+
+public class Father 
+{
+	public void houseColor()
+	{
+		System.out.println("the color of the house is yellow");
+		
+	}
+
+}
+class Son extends Father
+{
+	@Override
+	public void houseColor()
+	{
+		System.out.println("son changed the color to pink");
+	}
+}
+class Drive
+{
+	public static void main(String[] args)
+	{
+		Son s=new Son();
+		s.houseColor();
+		
+		Father f=new Son();
+		f.houseColor();
+	}
+	
+}
