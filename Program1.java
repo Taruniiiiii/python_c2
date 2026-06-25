@@ -249,3 +249,51 @@ class Int1Driver
 
 	}
 }
+
+//EXCEPTIONS
+//NullPointerException
+package src;
+
+public class Java1 
+{
+	public static void main(String[] args) {
+		System.out.println("this is start");
+		try
+		{
+			//here we are the risky line of code
+			String s=null;
+			System.out.println(s.length());
+			
+		}
+		catch(NullPointerException n)
+		{
+			n.printStackTrace();
+		}
+		System.out.println("This is end");
+	}
+}
+
+
+//ArithmeticException
+package src;
+
+public class Java1 
+{
+	public static void main(String[] args) {
+		System.out.println("this is start");
+		try
+		{
+			//here we are the risky line of code
+			int a=10;
+			int b=20;
+			
+			System.out.println(a/b);
+			
+		}
+		catch(ArithmeticException e)
+		{
+			e.printStackTrace();
+		}
+		System.out.println("This is end");
+	}
+}
