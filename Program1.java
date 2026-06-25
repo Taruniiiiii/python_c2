@@ -297,3 +297,34 @@ public class Java1
 		System.out.println("This is end");
 	}
 }
+
+//CUSTOM EXCEPTION
+package src;
+//custom exception
+//whenever the programmer creates his or her own exception , it is called as custom exception
+public class Text 
+{
+	static void checkAge(int age) throws Exception//here int is a formal argument
+	{
+		if(age<18)
+		{
+			throw new Exception("not eligible to vote");
+		}
+		else
+		{
+			System.out.println("eligible to vote");
+		}
+	}
+	public static void main(String[] args) {
+		try
+		{
+			checkAge(11);//here 11 is an actual argument
+			
+		}
+		catch(Exception e)
+		{
+			System.out.println("exception has occured");
+		}
+	}
+
+}
