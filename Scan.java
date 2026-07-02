@@ -436,3 +436,109 @@ public static void main(String[] args)
 
 }
 }
+
+//node
+package src;
+
+class Node
+{
+    int data;
+    Node next;
+
+    Node(int data)
+    {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class StackLL
+{
+    Node top = null;
+
+    // Push
+    void push(int data)
+    {
+        Node newNode = new Node(data);
+
+        if(top == null)
+        {
+            top = newNode;
+        }
+        else
+        {
+            newNode.next = top;
+            top = newNode;
+        }
+
+        System.out.println(data + " inserted");
+    }
+
+    // Pop
+    void pop()
+    {
+        if(top == null)
+        {
+            System.out.println("Stack is Empty");
+        }
+        else
+        {
+            System.out.println(top.data + " deleted");
+            top = top.next;
+        }
+    }
+
+    // Peek
+    void peek()
+    {
+        if(top == null)
+        {
+            System.out.println("Stack is Empty");
+        }
+        else
+        {
+            System.out.println("Top Element = " + top.data);
+        }
+    }
+
+    // Display
+    void display()
+    {
+        if(top == null)
+        {
+            System.out.println("Stack is Empty");
+        }
+        else
+        {
+            Node temp = top;
+
+            while(temp != null)
+            {
+                System.out.println(temp.data);
+                temp = temp.next;
+            }
+        }
+    }
+
+    // Main Method
+    public static void main(String[] args)
+    {
+        StackLL s = new StackLL();
+
+        s.push(10);
+        s.push(20);
+        s.push(30);
+
+        System.out.println("\nStack Elements:");
+        s.display();
+
+        System.out.println();
+        s.peek();
+
+        System.out.println();
+        s.pop();
+
+        System.out.println("\nStack After Pop:");
+        s.display();
+    }
+}
