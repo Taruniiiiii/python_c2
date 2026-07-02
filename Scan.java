@@ -417,7 +417,9 @@ void pop()
     }
     else
     {
+        //the top most ele is removed
         System.out.println("Removed or popped Element is: " + stack[top]);
+        //you have to move one step behind
         top--;
     }
 }
