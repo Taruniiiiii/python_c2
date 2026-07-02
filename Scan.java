@@ -366,3 +366,71 @@ public class Phone
     String color;
     
 }
+
+//stack
+package src;
+public class stack {
+	int top=-1;
+	int[] stack=new int[5];
+	
+	//push
+	void push(int data)
+	{
+		if (top==stack.length-1)
+		{
+			System.out.println("stack overflow");
+		}
+		else {
+			//move from -1 to 0th index position
+			top++;
+			stack[top]=data;
+			System.out.println(data+"inserted");
+		}
+	}
+void display()
+{
+    if(top == -1)
+    {
+        System.out.println("Stack is Empty");
+    }
+    else
+    {
+        for(int i = top; i >= 0; i--)
+        {
+            System.out.println(stack[i]);
+        }
+    }
+}
+void peek()
+{
+	if(top==-1)
+	{
+		System.out.println("no element in stack");
+	}
+	System.out.println("top ele is"+stack[top]);
+}
+void pop()
+{
+    if(top == -1)
+    {
+        System.out.println("Stack Underflow");
+    }
+    else
+    {
+        System.out.println("Removed or popped Element is: " + stack[top]);
+        top--;
+    }
+}
+public static void main(String[] args)
+{
+	stack s=new stack();
+	s.push(10);
+	s.push(20);
+	s.push(30);
+	s.push(40);
+	s.push(50);
+	s.peek();
+	s.pop();
+
+}
+}
