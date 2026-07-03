@@ -542,3 +542,120 @@ public class StackLL
         s.display();
     }
 }
+
+//hashing
+package src;
+
+class Node
+{
+    int key;
+    String value;
+    Node next;
+
+    Node(int key, String value)
+    {
+        this.key = key;
+        this.value = value;
+        this.next = null;
+    }
+}
+
+public class HashMapDSA
+{
+    // Hash Table (Array of Linked Lists)
+    Node[] table = new Node[10];
+
+    // Hash Function
+    int hashFunction(int key)
+    {
+        return key % table.length;
+    }
+
+    // Insert Operation
+    void insert(int key, String value)
+    {
+        int index = hashFunction(key);
+
+        Node newNode = new Node(key, value);
+
+        // If bucket is empty
+        if(table[index] == null)
+        {
+            table[index] = newNode;
+        }
+        else
+        {
+            // Collision occurred
+            Node temp = table[index];
+
+            while(temp.next != null)
+            {
+                temp = temp.next;
+            }
+
+            temp.next = newNode;
+        }
+
+        System.out.println(key + " inserted successfully.");
+    }
+
+    // Display Hash Table
+    void display()
+    {
+        for(int i = 0; i < table.length; i++)
+        {
+            System.out.print("Bucket " + i + ": ");
+
+            Node temp = table[i];
+
+            while(temp != null)
+            {
+                System.out.print("(" + temp.key + "," + temp.value + ") -> ");
+                temp = temp.next;
+            }
+
+            System.out.println("NULL");
+        }
+    }
+
+    // Search Operation
+    void search(int key)
+    {
+        int index = hashFunction(key);
+
+        Node temp = table[index];
+
+        while(temp != null)
+        {
+            if(temp.key == key)
+            {
+                System.out.println("Key Found");
+                System.out.println("Value = " + temp.value);
+                return;
+            }
+
+            temp = temp.next;
+        }
+
+        System.out.println("Key Not Found");
+    }
+
+    // Main Method
+    public static void main(String[] args)
+    {
+        HashMapDSA obj = new HashMapDSA();
+
+        obj.insert(10, "Taruni");
+        obj.insert(20, "Anu");
+        obj.insert(30, "Ravi");
+        obj.insert(40, "Sai");
+        obj.insert(11, "Priya"); // Collision with key 1 if table size changes accordingly
+
+        System.out.println("\nHash Table:");
+        obj.display();
+
+        System.out.println();
+        obj.search(20);
+        obj.search(50);
+    }
+}
