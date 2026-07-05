@@ -645,3 +645,13 @@ class Solution:
                     r-=1
         return False #used when no triplets are found 
     
+##gfg
+class Solution:
+    def search(self, pat, txt):
+        # code here
+        ans=[]
+        for i in range(len(txt)-len(pat)+1):#how many times the loop should run
+            if txt[i:i+len(pat)]==pat:
+                ans.append(i)
+        return ans
+            
