@@ -653,6 +653,7 @@ public class HashMapDSA
 
         System.out.println("\nHash Table:");
         obj.display();
+        
 
         System.out.println();
         obj.search(20);

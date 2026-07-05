@@ -614,3 +614,34 @@ def quick_sort(arr):
             
 a = [8,6,4,9,1,2]
 print(quick_sort(a))
+
+###class Solution:
+    def bubbleSort(self,arr):
+        n=len(arr)#5
+        for i in range(n-1):#5-1
+            swap=False
+            for j in range(0,n-i-1):#5-i-1,if the last is sorted it wont check the last index again,goes for the last-1 index
+                if arr[j]>arr[j+1]:
+                    arr[j],arr[j+1]=arr[j+1],arr[j]
+                    swap=True
+            if not swap:
+                break
+        return arr
+##gfg
+class Solution:
+    def hasTripletSum(self, arr, target):
+        arr.sort()#would work good for 2 pointers
+        n=len(arr)
+        for i in range(n):
+            l=i+1
+            r=n-1
+            while l<r:
+                s=arr[i]+arr[l]+arr[r]# first ele, i+1 and right
+                if s==target:
+                    return True
+                elif s<target:
+                    l+=1
+                else:
+                    r-=1
+        return False #used when no triplets are found 
+    
