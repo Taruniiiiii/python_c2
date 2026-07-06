@@ -615,6 +615,7 @@ def quick_sort(arr):
 a = [8,6,4,9,1,2]
 print(quick_sort(a))
 
+
 ###class Solution:
     def bubbleSort(self,arr):
         n=len(arr)#5
