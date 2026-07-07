@@ -655,4 +655,34 @@ class Solution:
             if txt[i:i+len(pat)]==pat:
                 ans.append(i)
         return ans
+    
+def counting_sort(arr):
+   if not arr:
+       return arr
+
+   max_value = max(arr)
+
+   count = [0] * (max_value + 1)
+
+   # Count frequencies
+   for num in arr:
+       count[num] += 1
+
+   # Cumulative counts
+   for i in range(1, len(count)):
+       count[i] += count[i - 1]
+
+   output = [0] * len(arr)
+
+   # Build output (right to left)
+   for num in reversed(arr):
+       output[count[num] - 1] = num
+       count[num] -= 1
+
+   return output
+
+
+arr = [4, 2, 2, 8, 3, 3, 1]
+print(counting_sort(arr))
+
             
