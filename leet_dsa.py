@@ -752,3 +752,13 @@ a = [8,6,4,9,1,2]
 print(count_sort(a))
 print(count_sort(b)) 
 """
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        li=[]
+        for i in nums1:
+            if i in nums2:
+                li.append(i)
+                nums2.remove(i)
+        return li
+
+        
