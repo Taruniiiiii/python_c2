@@ -759,6 +759,6 @@ class Solution:
             if i in nums2:
                 li.append(i)
                 nums2.remove(i)
-        return li
+        return li"""
 
         
