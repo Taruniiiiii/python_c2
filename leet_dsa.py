@@ -760,5 +760,207 @@ class Solution:
                 li.append(i)
                 nums2.remove(i)
         return li"""
+        
+#quick sort lumoto hoare
+#06/07/2026
+#counting sort--------------
+
+#arr = [3 3 2 4]
+
+"""
+def counting_sort(arr):
+
+    max_val = max(arr)
+
+    count = [0]*(max_val+1) #[0 0 1 2 1]
+                            # 0 1 2 3 4
+
+    for num in arr: #3 3 2 4
+        count[num]+=1
+    
+
+    j= 0
+    for i in range(len(count)): #0
+        while count[i]>0:
+            arr[j] = i
+            j+=1
+            count[i]-=1
+
+    return arr
+a = [8,6,4,9,1,2]
+b= [3, 3, 2, 4]
+print(counting_sort(a)) 
+print(counting_sort(b))             
+
+"""
+
+#Stable counting sort--------------
+#a = [3, 3, 2, 4]
+"""
+def count_sort(arr):
+
+    max_val = max(arr)
+
+    count = [0]*(max_val+1)#[0 0 0 0 0] = [0 0 1 2 1]
+
+    #freq
+    for num in arr:
+        count[num]+=1
+
+    #cumulative count
+
+    for i in range(1, len(count)): #[0 0 1 3 4]
+        count[i]+=count[i-1]
+
+    output = [0]*len(arr)
+
+    #right-left--
+
+    for j in reversed(arr):
+        output[count[j]-1] = j
+        count[j]-=1
+
+    return output
+
+
+b= [3, 3, 2, 4]
+a = [8,6,4,9,1,2]
+
+print(count_sort(a))
+print(count_sort(b)) 
+"""
+
+
+#Radix sort-----------------
+"""
+def count_sort(arr, place):
+
+    n = len(arr)
+    output = [0]*n
+
+    count = [0]*10 #[1 0 0 0 0 0 0 0 0 0]
+
+    for i in range(0,n):
+        index = arr[i]//place
+        count[index%10]+=1
+
+    for i in range(1,10):
+        count[i]+=count[i-1]
+
+
+    i = n-1
+
+    while i>=0:
+
+        ind = arr[i]//place
+        output[count[ind%10]-1] = arr[i]
+        count[ind%10]-=1
+        i-=1
+
+    for i in range(0,n):
+        arr[i]= output[i]
+        
+    
+        
+def radix_sort(arr):
+    max_ele = max(arr)
+
+    place =1
+
+    while max_ele//place>0:
+        count_sort(arr, place)
+        place*=10
+
+
+
+a = [8,6,4,9,1,2]
+b = [100, 201, 1, 810, 904, 6, 25]
+radix_sort(b)
+print(b)
+"""
+
+
+
+#Quick sort---Lomuto
+
+"""
+
+
+def lomuto(arr, low, high):
+
+    pivot = arr[high]
+    i = low-1
+
+    for j in range(low, high-1):
+        if arr[j]<=pivot:
+            i+=1
+            arr[j],arr[i]=arr[i],arr[j]
+
+    arr[i+1],arr[high]=arr[high],arr[i+1]
+    print(arr,i+1)
+    return i+1
+
+
+def quick_sort(arr,low, high):
+    if low<high:
+        pi = lomuto(arr,low,high)
+
+        quick_sort(arr,low,pi-1)
+
+        quick_sort(arr, pi+1, high)
+
+
+    
+a = [50,20,60,10,40]
+print(quick_sort(a, 0, len(a)-1))
+
+
+"""
+
+#time complexity -- O(n) for complete ele traverse, O(logn) for partitioning ===> O(nlogn)
+
+#Quick sort Hoare
+"""
+
+def hoare(arr,low,high):
+    piv = arr[low]
+
+    i = low-1
+    j = high+1
+
+    while True:
+
+        i+=1
+
+        while arr[i]<piv:
+            i+=1
+
+        j-=1
+
+        while arr[j]>piv:
+            j-=1
+
+        if i>=j:
+            return j
+
+
+        arr[i],arr[j] = arr[j],arr[i]
+
+def quick_sort(arr,low, high):
+    
+    if low<high:
+        pi = hoare(arr,low,high)
+
+        quick_sort(arr,low,pi)
+
+        quick_sort(arr, pi+1, high)
+
+        
+a = [50,20,60,10,40]
+quick_sort(a, 0, len(a)-1)
+print(a)
+        
+"""
+
 
         
