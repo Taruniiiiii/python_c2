@@ -954,6 +954,7 @@ def quick_sort(arr,low, high):
         quick_sort(arr,low,pi)
 
         quick_sort(arr, pi+1, high)
+        
 
         
 a = [50,20,60,10,40]
