@@ -883,7 +883,7 @@ print(b)
 
 #Quick sort---Lomuto
 
-"""
+
 
 
 def lomuto(arr, low, high):
