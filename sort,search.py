@@ -1,6 +1,3 @@
-DSA ***********
-
-
 
 
 
@@ -648,7 +645,6 @@ for i in k:
 answer = query(k, 1,0,3,1)
 print("distance:", answer)
 
-"""
 
 #longest subarr with sum =k: ------------------
 
@@ -679,4 +675,25 @@ def long_subarr(arr,k):
 arr = list(map(int,input().split()))
 
 k int(input())
-print(long_subarr(arr,k))
+print(long_subarr(arr,k))"""
+
+##input:
+arr=['a', 'i', 'o', 'r', 't', 'u', 'o']
+k=4
+def slide(arr,k):
+    count=0
+    for i in range(k):
+        if arr[i] in 'aeiou':
+            count+=1
+    max_count=count
+        
+    for i in range(k,len(arr)):
+        if arr[i] in 'aeiou':
+            count+=1
+        if arr[i-k] in 'aeiou':
+            count-=1
+        max_count=max(max_count,count)
+    return max_count
+print(slide(arr,k))
+
+    
